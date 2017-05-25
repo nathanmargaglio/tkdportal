@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from .serializers import UserSerializer, GroupSerializer
+from django.contrib.auth.decorators import login_required
 
 
 class UserViewSet(viewsets.ModelViewSet):
