@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'oauth2_provider',
     'corsheaders',
     'rest_framework',
+    'rest_api'
 ]
 
 REST_FRAMEWORK = {

@@ -1,7 +1,8 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
-from .serializers import UserSerializer, GroupSerializer
+from .serializers import UserSerializer, GroupSerializer, IncomeSerializer
 from django.contrib.auth.decorators import login_required
+from .models import Income
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -18,3 +19,11 @@ class GroupViewSet(viewsets.ModelViewSet):
     """
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
+
+
+class IncomeViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows groups to be viewed or edited.
+    """
+    queryset = Income.objects.all()
+    serializer_class = IncomeSerializer
