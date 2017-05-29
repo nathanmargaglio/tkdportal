@@ -18,5 +18,5 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 class IncomeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Income
-        fields = ('id', 'created', 'school', 'date',
-                  'check', 'cash', 'credit_card', 'vending', 'ez_payment')
+        fields = ('school', 'date', 'check', 'cash',
+                  'credit_card', 'vending', 'ez_payment')
